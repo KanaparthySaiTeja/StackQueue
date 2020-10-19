@@ -63,4 +63,40 @@ public class StackQueue {
             top = (top).link;
         }
     }
+//uc3
+    static class QNode {
+        int key;
+        QNode next;
+
+        public QNode(int key)
+        {
+            this.key = key;
+            this.next = null;
+        }
     }
+
+    static class Queue {
+        QNode front, rear;
+
+        public Queue()
+        {
+            this.front = this.rear = null;
+        }
+
+        // UC 3 - Method to add an key to the queue
+        void enqueue(int key)
+        {
+            QNode temp = new QNode(key);
+
+            // If queue is empty, then new node is front and rear both
+            if (this.rear == null) {
+                this.front = this.rear = temp;
+                return;
+            }
+
+            // Add the new node at the end of queue and change rear
+            this.rear.next = temp;
+            this.rear = temp;
+        }
+
+    }}
