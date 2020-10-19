@@ -39,4 +39,28 @@ public class StackQueue {
             }
 
         }
+    public boolean isEmpty()
+    {
+        return top == null;
+    }
+    // UserCase 2: Peek & Pop
+    public int peek()
+    {
+        // check for non empty stack
+        if (!isEmpty())
+        {
+//            System.out.println(top.data);
+            return top.data;
+        }
+        else
+        {
+            System.out.println("Stack is empty");
+            return -1;
+        }
+    }
+    public void pop() {
+        while (top != null) {
+            top = (top).link;
+        }
+    }
     }

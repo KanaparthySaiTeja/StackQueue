@@ -6,5 +6,9 @@ public class Mainclass {
         obj.push(30);
         obj.push(56);
         obj.display();
+        System.out.printf("\nTop element is %d\n", obj.peek()); //UC2
+
+        obj.pop(); // UC 2
+        obj.display();
     }
 }
