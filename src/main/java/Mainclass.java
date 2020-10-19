@@ -19,5 +19,10 @@ public class Mainclass {
         //System.out.println("Queue is: "+q);
         System.out.println("Queue Front : " + q.front.key);
         System.out.println("Queue Rear : " + q.rear.key);
+        //uc4
+        q.dequeue();
+        System.out.println("Queue Front : " + q.front.key);
+        System.out.println("Queue Rear : " + q.rear.key);
+
     }
 }

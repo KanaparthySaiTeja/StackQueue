@@ -98,5 +98,19 @@ public class StackQueue {
             this.rear.next = temp;
             this.rear = temp;
         }
+        // UC 4 - dequeue
+        void dequeue()
+        {
 
-    }}
+            if (this.front == null)
+                return;
+
+            QNode temp = this.front;
+            this.front = this.front.next;
+
+            if (this.front == null)
+                this.rear = null;
+        }
+    }
+
+}
